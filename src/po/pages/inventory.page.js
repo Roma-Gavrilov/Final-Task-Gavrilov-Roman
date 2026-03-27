@@ -1,27 +1,18 @@
 class InventoryPage {
-    async getProductByIndex(index) {
-        const items = await $$('.inventory_item');
-        return items[index];
+    get productIndex() {
+        return $$('.inventory_item')[3];
     }
 
-    async productBtn(index) {
-        const item = await this.getProductByIndex(index);
-        await item.$('.inventory_item_name').click();
+    get productName() {
+        return this.productIndex.$('.inventory_item_name');
     }
 
-    async getProductName(index) {
-        const item = await this.getProductByIndex(index);
-        return await item.$('.inventory_item_name').getText();
+    get productDescription() {
+        return this.productIndex.$('.inventory_item_desc');
     }
 
-    async getProductDescription(index) {
-        const item = await this.getProductByIndex(index);
-        return await item.$('.inventory_item_desc').getText();
-    }
-
-    async getProductPrice(index) {
-        const item = await this.getProductByIndex(index);
-        return await item.$('.inventory_item_price').getText();
+    get productPrice() {
+        return this.productIndex.$('.inventory_item_price');
     }
 }
 

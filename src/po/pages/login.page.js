@@ -1,25 +1,19 @@
 class LoginPage {
-    get username() {
-        return $('#user-name');
-    };
-
-    get password() {
-        return $('//input[@id="password"]');
-    };
+    async open() {
+        await browser.url('/');
+    }
 
     get loginBtn() {
         return $('.submit-button');
     };
 
-    async open() {
-        await browser.url('https://www.saucedemo.com/');
-    }
-
-    async login(user, password) {
-        await this.username.setValue(user);
-        await this.password.setValue(password);
-        await this.loginBtn.click();
-    }
+    login(param) {
+        const selectors = {
+            username: '#user-name',
+            password: '//input[@id="password"]'
+        };
+        return $(selectors[param]);
+    };
 }
 
 module.exports = new LoginPage();
