@@ -3,6 +3,7 @@ const loginPage = require('./../po/pages/login.page');
 const inventoryPage = require('./../po/pages/inventory.page');
 const inventoryItemPage = require('./../po/pages/inventory-item.page');
 const footerComponent = require('./../po/components/common/footer.component');
+const { socialLinksVerify } = require('./../utils/social-link-verify');
 const assert = require('assert');
 
 describe('UC-1 Product Details Verification', () => {
@@ -52,7 +53,10 @@ describe('UC-2 Footer & Social Links', () => {
         await expect(footerComponent.linkedin).toBeExisting();
     });
 
-    it('Verify that clicking a social link opens the correct URL in a new tab/window', async () => {
-
+    it('Verify that clicking a social link opens the correct URL in a new tab/window', async () => {        
+        for (const link of footerComponent.socialLinks) {
+            await socialLinksVerify(link);
+        }
     });
+    
 })
