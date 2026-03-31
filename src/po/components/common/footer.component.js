@@ -5,7 +5,7 @@ class FooterComponent extends BaseComponent {
         super('footer');
     }
 
-    get footer() {
+    get getFooter() {
         return this.rootEl;
     }
     
@@ -21,7 +21,7 @@ class FooterComponent extends BaseComponent {
         return this.rootEl.$('.social_linkedin a');
     }
 
-    get socialLinks() {
+    get getSocialLinks() {
         return [
             { element: this.twitter, expected: 'https://twitter.com/saucelabs' },
             { element: this.facebook, expected: 'https://www.facebook.com/saucelabs' },

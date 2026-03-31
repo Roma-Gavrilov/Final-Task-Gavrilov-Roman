@@ -1,18 +1,20 @@
-class InventoryPage {
-    get productIndex() {
-        return $$('.inventory_item')[3];
+const BaseComponent = require("../components/common/base.component");
+
+class InventoryPage extends BaseComponent {
+    constructor() {
+        super(`//div[@class="inventory_item"][.//div[text()="Sauce Labs Fleece Jacket"]]`)
     }
 
-    get productName() {
-        return this.productIndex.$('.inventory_item_name');
+    get getProductByName() {
+        return this.rootEl.$('.inventory_item_name');
     }
 
-    get productDescription() {
-        return this.productIndex.$('.inventory_item_desc');
+    get getProductDescription() {
+        return this.rootEl.$('.inventory_item_desc');
     }
 
-    get productPrice() {
-        return this.productIndex.$('.inventory_item_price');
+    get getProductPrice() {
+        return this.rootEl.$('.inventory_item_price');
     }
 }
 

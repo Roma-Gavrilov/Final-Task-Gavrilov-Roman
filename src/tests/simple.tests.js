@@ -1,62 +1,72 @@
-const logger = require('./../utils/logger');
+const basePage = require('./../po/pages/base.page');
 const loginPage = require('./../po/pages/login.page');
 const inventoryPage = require('./../po/pages/inventory.page');
 const inventoryItemPage = require('./../po/pages/inventory-item.page');
+const cartPage = require('./../po/pages/cart.page');
+const headerComponent = require('./../po/components/common/header.component');
 const footerComponent = require('./../po/components/common/footer.component');
 const { socialLinksVerify } = require('./../utils/social-link-verify');
+const { test, expect } = require('@playwright/test');
 const assert = require('assert');
+
+
 
 describe('UC-1 Product Details Verification', () => {
     beforeEach(async () => {
-        await loginPage.open();
-        await loginPage.login('username').setValue('standard_user');
-        await loginPage.login('password').setValue('secret_sauce');
-        await loginPage.loginBtn.click();
+        await basePage.open();
+        await loginPage.login('standard_user', 'secret_sauce');
     });
 
     it('Click on a product title', async () => {
-        await logger.info(`Checking product: ${await inventoryPage.productName.getText()}`);
-        await inventoryPage.productName.click();
+        const productNameBefore = await inventoryPage.getProductByName.getText();
+        await inventoryPage.getProductByName.click();
+        const productNameAfter = await inventoryItemPage.getProductName.getText();
+        assert.strictEqual(productNameBefore, productNameAfter, 'Wrong product opened');
     });
 
     it('Validate price and description', async () => {
-        const descriptionInv = await inventoryPage.productDescription.getText();
-        const priceInv = await inventoryPage.productPrice.getText();
-        await inventoryPage.productName.click();
-        const descriptionItem = await inventoryItemPage.productDescription.getText();
-        const priceItem = await inventoryItemPage.productPrice.getText();
-        assert.strictEqual(descriptionInv, descriptionItem, 'Description does not match');
-        assert.strictEqual(priceInv, priceItem, 'Price does not match');
+        const descriptionInventoryPage = await inventoryPage.getProductDescription.getText();
+        const priceInventoryPage = await inventoryPage.getProductPrice.getText();
+        await inventoryPage.getProductByName.click();
+        const descriptionItemPage = await inventoryItemPage.getProductDescription.getText();
+        const priceItemPage = await inventoryItemPage.getProductPrice.getText();
+        assert.strictEqual(descriptionInventoryPage, descriptionItemPage, 'Description does not match');
+        assert.strictEqual(priceInventoryPage, priceItemPage, 'Price does not match');
     });
 
     it('Add the item to the cart from the Details Page', async () => {
-        await inventoryPage.productName.click();
+        const productAddToCart = await inventoryPage.getProductByName.getText();
+        await inventoryPage.getProductByName.click();
         await inventoryItemPage.addToCartBtn.click();
+        await headerComponent.CartBrt.click();
+        const productAddedToCart = await cartPage.getProductName.getText();
+        assert.strictEqual(productAddToCart, productAddedToCart, 'Wrong product in cart');
     });
 });
 
 describe('UC-2 Footer & Social Links', () => {
     beforeEach(async () => {
-        await loginPage.open();
-        await loginPage.login('username').setValue('standard_user');
-        await loginPage.login('password').setValue('secret_sauce');
-        await loginPage.loginBtn.click();
+        await basePage.open();
+        await loginPage.login('standard_user', 'secret_sauce');
     });
 
     it('Scroll to the footer', async () => {
-        await footerComponent.footer.scrollIntoView();
+        const isFooterDisplayed = await footerComponent.getFooter.isDisplayed();
+        assert.strictEqual(isFooterDisplayed, true, 'Footer is not displayed');
     });
 
-    it('Verify that the Twitter, Facebook, and LinkedIn links exist', async () => {
-        await expect(footerComponent.twitter).toBeExisting();
-        await expect(footerComponent.facebook).toBeExisting();
-        await expect(footerComponent.linkedin).toBeExisting();
+    it('Verify that the Twitter, Facebook, LinkedIn links exist', async () => {
+        const isTwitterExisting = await footerComponent.twitter.isExisting();
+        const isFacebookExisting = await footerComponent.facebook.isExisting();
+        const isLinkedInExisting = await footerComponent.linkedin.isExisting();
+        assert.ok(isTwitterExisting, 'Twitter link does not exist');
+        assert.ok(isFacebookExisting, 'Facebook link does not exist');
+        assert.ok(isLinkedInExisting, 'LinkedIn link does not exist');
     });
 
     it('Verify that clicking a social link opens the correct URL in a new tab/window', async () => {        
-        for (const link of footerComponent.socialLinks) {
+        for (const link of footerComponent.getSocialLinks) {
             await socialLinksVerify(link);
         }
     });
-    
 })

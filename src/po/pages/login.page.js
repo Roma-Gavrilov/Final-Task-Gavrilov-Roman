@@ -1,19 +1,21 @@
 class LoginPage {
-    async open() {
-        await browser.url('/');
+    get username() {
+        return $('#user-name');
     }
 
+    get password() {
+        return $('//input[@id="password"]');
+    }
+    
     get loginBtn() {
         return $('.submit-button');
     };
 
-    login(param) {
-        const selectors = {
-            username: '#user-name',
-            password: '//input[@id="password"]'
-        };
-        return $(selectors[param]);
-    };
+    async login(user, pass) {
+        await this.username.setValue(user);
+        await this.password.setValue(pass);
+        await this.loginBtn.click();
+    }
 }
 
 module.exports = new LoginPage();

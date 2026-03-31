@@ -1,9 +1,13 @@
 class InventoryItemPage {
-    get productDescription() {
+    get getProductName() {
+        return $('.inventory_details_name');
+    }
+    
+    get getProductDescription() {
         return $('.inventory_details_desc');
     }
 
-    get productPrice() {
+    get getProductPrice() {
         return $('.inventory_details_price');
     }
 
