@@ -6,7 +6,6 @@ const cartPage = require('./../po/pages/cart.page');
 const headerComponent = require('./../po/components/common/header.component');
 const footerComponent = require('./../po/components/common/footer.component');
 const { socialLinksVerify } = require('./../utils/social-link-verify');
-const { test, expect } = require('@playwright/test');
 const assert = require('assert');
 
 
