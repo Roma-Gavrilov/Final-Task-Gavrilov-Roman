@@ -23,7 +23,7 @@ class FooterComponent extends BaseComponent {
 
     get getSocialLinks() {
         return [
-            { element: this.twitter, expected: 'https://twitter.com/saucelabs' },
+            { element: this.twitter, expected: 'https://x.com/saucelabs' },
             { element: this.facebook, expected: 'https://www.facebook.com/saucelabs' },
             { element: this.linkedin, expected: 'https://www.linkedin.com/company/sauce-labs/' },
         ];
