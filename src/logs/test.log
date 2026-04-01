@@ -1,59 +1,3 @@
-## About
-
-WebDriverIO Test Automation Project ('Final Task Gavrilov Roman')
-
-Focus: Dynamic interaction and verifying specific product details.
-
-## Usage
-
-Clone the repository:
-
-```bash
-git clone https://github.com/Roma-Gavrilov/Final-Task-Gavrilov-Roman.git
-```
-
-## Technical Stack
-
-- Node.js v24.14.0
-- WebDriverIO 9.27.0
-- Mocha 10.8.2
-- chromedriver 147.0.0
-- geckodriver 0.36.0
-- Winston 3.19.0
-- Browsers: Chrome, Firefox (parallel execution supported)
-- Locators: Mix of CSS and XPath
-
-## File Structure
-
-src/
-├── config/
-│ └── wdio.conf.js
-├── logs/
-│ └── test.log
-├── po/
-│ ├── components/
-│ │ └── common/
-│ │ ├── base.component.js
-│ │ ├── footer.component.js
-│ │ └── header.component.js
-│ └── pages/
-│ ├── base.page.js
-│ ├── cart.page.js
-│ ├── inventory-item.page.js
-│ ├── inventory.page.js
-│ └── login.page.js
-├── tests/
-│ └── simple.tests.js
-└── utils/
-├── logger.js
-└── social-link-verify.js
-
-## Branches
-
-main - primary branch
-
-## Winston log:
-
 Wed Apr 01 2026 19:58:22 +0300 [INFO]: Get product name from inventory page
 Wed Apr 01 2026 19:58:22 +0300 [INFO]: Product found: Sauce Labs Fleece Jacket
 Wed Apr 01 2026 19:58:22 +0300 [INFO]: Click on product - Sauce Labs Fleece Jacket
@@ -69,5 +13,18 @@ Wed Apr 01 2026 19:58:23 +0300 [INFO]: Product page - Description: "It's not eve
 Wed Apr 01 2026 19:58:23 +0300 [INFO]: Verify description matches
 Wed Apr 01 2026 19:58:23 +0300 [INFO]: Verify price matches
 Wed Apr 01 2026 19:58:23 +0300 [INFO]: Product description and price verification passed
-...
-Full logs available in src/logs/test.log
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Get product name from inventory page before adding to cart
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Product to add: Sauce Labs Fleece Jacket
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Click on product: Sauce Labs Fleece Jacket
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Click "Add to cart" button
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Open cart
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Get product name from cart
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Product in cart: Sauce Labs Fleece Jacket
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Verify correct product added to cart
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Product successfully added to cart
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Check if footer is displayed
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Footer displayed: true
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Footer visibility verified
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Check social links existence
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Twitter: true, Facebook: true, LinkedIn: true
+Wed Apr 01 2026 19:58:23 +0300 [INFO]: Social links existence verified
