@@ -92,7 +92,7 @@ describe('UC-2 Footer & Social Links', () => {
         assert.ok(isLinkedInExisting, 'LinkedIn link does not exist');
         logger.info('Social links existence verified');
     });
-
+    
     it('Verify that clicking a social link opens the correct URL in a new tab/window', async () => {        
         for (const link of footerComponent.getSocialLinks) {
             await socialLinksVerify(link);

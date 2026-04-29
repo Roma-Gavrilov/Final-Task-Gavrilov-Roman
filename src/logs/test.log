@@ -1,30 +1,30 @@
-Wed Apr 01 2026 19:58:22 +0300 [INFO]: Get product name from inventory page
-Wed Apr 01 2026 19:58:22 +0300 [INFO]: Product found: Sauce Labs Fleece Jacket
-Wed Apr 01 2026 19:58:22 +0300 [INFO]: Click on product - Sauce Labs Fleece Jacket
-Wed Apr 01 2026 19:58:22 +0300 [INFO]: Get product name from product details page
-Wed Apr 01 2026 19:58:22 +0300 [INFO]: Product opened: Sauce Labs Fleece Jacket
-Wed Apr 01 2026 19:58:22 +0300 [INFO]: Verify product name matches
-Wed Apr 01 2026 19:58:22 +0300 [INFO]: Product title verification passed
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Get product description and price from inventory page
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Inventory page - Description: "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.", Price: "$49.99"
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Click on product to open details page
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Get product description and price from product details page
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Product page - Description: "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.", Price: "$49.99"
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Verify description matches
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Verify price matches
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Product description and price verification passed
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Get product name from inventory page before adding to cart
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Product to add: Sauce Labs Fleece Jacket
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Click on product: Sauce Labs Fleece Jacket
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Click "Add to cart" button
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Open cart
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Get product name from cart
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Product in cart: Sauce Labs Fleece Jacket
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Verify correct product added to cart
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Product successfully added to cart
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Check if footer is displayed
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Footer displayed: true
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Footer visibility verified
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Check social links existence
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Twitter: true, Facebook: true, LinkedIn: true
-Wed Apr 01 2026 19:58:23 +0300 [INFO]: Social links existence verified
+Wed Apr 29 2026 12:25:33 +0300 [INFO]: Get product name from inventory page
+Wed Apr 29 2026 12:25:33 +0300 [INFO]: Product found: Sauce Labs Fleece Jacket
+Wed Apr 29 2026 12:25:33 +0300 [INFO]: Click on product - Sauce Labs Fleece Jacket
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Get product name from product details page
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Product opened: Sauce Labs Fleece Jacket
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Verify product name matches
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Product title verification passed
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Get product description and price from inventory page
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Inventory page - Description: "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.", Price: "$49.99"
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Click on product to open details page
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Get product description and price from product details page
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Product page - Description: "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.", Price: "$49.99"
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Verify description matches
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Verify price matches
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Product description and price verification passed
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Get product name from inventory page before adding to cart
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Product to add: Sauce Labs Fleece Jacket
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Click on product: Sauce Labs Fleece Jacket
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Click "Add to cart" button
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Open cart
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Get product name from cart
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Product in cart: Sauce Labs Fleece Jacket
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Verify correct product added to cart
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Product successfully added to cart
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Check if footer is displayed
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Footer displayed: true
+Wed Apr 29 2026 12:25:34 +0300 [INFO]: Footer visibility verified
+Wed Apr 29 2026 12:25:35 +0300 [INFO]: Check social links existence
+Wed Apr 29 2026 12:25:35 +0300 [INFO]: Twitter: true, Facebook: true, LinkedIn: true
+Wed Apr 29 2026 12:25:35 +0300 [INFO]: Social links existence verified
